@@ -1,0 +1,22 @@
+.swiper-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.swiper-carousel {
+  justify-content: center;
+  width: 100%;
+}
+
+.swiper-slide {
+}
+
+.swiper-pagination {
+  bottom: 0;
+  padding-bottom: 10px;
+}
+
+.swiper-wrapper {
+}
