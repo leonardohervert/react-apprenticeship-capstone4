@@ -10683,10 +10683,10 @@
     "unquote" "~1.1.1"
     "util.promisify" "~1.0.0"
 
-"swiper@^8.0.3":
-  "integrity" "sha512-mpw7v/Lkh48LQUxtJuFD+3Lls8LViNi3j1fbk45fNo9DXZxXK/e7NMixxS27OxvC5wx+5H3bet1O2pdjk7akBA=="
-  "resolved" "https://registry.npmjs.org/swiper/-/swiper-8.0.3.tgz"
-  "version" "8.0.3"
+"swiper@^8.0.0":
+  "integrity" "sha512-ue0ybmUIQXZccKo7KutJ2dKM1RgFt7JgJHM7F6adr0JAbG7dJUnTTSQ5l/2AS8/mwv3t4sPCL9lFh9pUAtq1iw=="
+  "resolved" "https://registry.npmjs.org/swiper/-/swiper-8.0.0.tgz"
+  "version" "8.0.0"
   dependencies:
     "dom7" "^4.0.4"
     "ssr-window" "^4.0.2"

@@ -1,22 +1,19 @@
-.swiper-container {
+.swiper {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.swiper-carousel {
-  justify-content: center;
-  width: 100%;
+  height: 100%;
 }
 
 .swiper-slide {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.swiper-pagination {
-  bottom: 0;
-  padding-bottom: 10px;
+.swiper-slide img {
+  object-fit: cover;
 }
 
-.swiper-wrapper {
+.swiper-slide {
+  width: 80%;
 }

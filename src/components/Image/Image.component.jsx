@@ -2,12 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const StImage = styled.img`
+  display: block;
+  max-width: 100%;
   height: auto;
-  max-widht: 100%;
 `;
 
-const Image = ({ ...props }) => {
-  return <StImage {...props} />;
+const Image = ({ alt, ...props }) => {
+  return <StImage alt={alt} {...props} />;
 };
 
 export default Image;

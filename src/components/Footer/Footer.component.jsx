@@ -9,8 +9,8 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 100%;
   bottom: 0px;
-  width: 100vw;
 `;
 
 const Footer = ({ ...props }) => {

@@ -1,16 +1,17 @@
 import React from "react";
 import "./Product.styles.css";
+import Image from "../Image";
 
 const Product = ({ item }) => {
-  console.log(item);
   const { data } = item;
   const { category, mainimage } = data;
+  console.log(item);
   return (
     <div className="product-container">
-      <img className="product-img" alt={mainimage.alt} src={mainimage.url} />
+      <Image className="product-img" alt={mainimage.alt} src={mainimage.url} />
       <div className="product-description">
-        <p>{data.name}</p>
-        <div className="product-price">${data.price}</div>
+        <p className="product-text">{data.name}</p>
+        <p className="product-price">${data.price}</p>
       </div>
       <div className="product-category">{category.slug}</div>
     </div>

@@ -7,14 +7,10 @@ const Products = () => {
   const { data, isLoading } = useFeaturedProducts();
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    console.log(isLoading);
     if (!isLoading) {
       setProducts(data?.results);
     }
   }, [isLoading, data]);
-  useEffect(() => {
-    console.log(products);
-  }, [products]);
 
   return (
     <div className="products-container">

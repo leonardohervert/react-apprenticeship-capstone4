@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { API_BASE_URL } from "../constants";
 import { useLatestAPI } from "./useLatestAPI";
 
-export function useFeaturedBanners() {
+export function useFeaturedCategories() {
   const { ref: apiRef, isLoading: isApiMetadataLoading } = useLatestAPI();
-  const [featuredBanners, setFeaturedBanners] = useState(() => ({
+  const [featuredCategories, setFeaturedCategories] = useState(() => ({
     data: {},
     isLoading: true,
   }));
@@ -18,11 +18,11 @@ export function useFeaturedBanners() {
 
     async function getFeaturedBanners() {
       try {
-        setFeaturedBanners({ data: {}, isLoading: true });
+        setFeaturedCategories({ data: {}, isLoading: true });
 
         const response = await fetch(
           `${API_BASE_URL}/documents/search?ref=${apiRef}&q=${encodeURIComponent(
-            '[[at(document.type, "banner")]]'
+            '[[at(document.type, "category")]]'
           )}&lang=en-us&pageSize=5`,
           {
             signal: controller.signal,
@@ -30,9 +30,9 @@ export function useFeaturedBanners() {
         );
         const data = await response.json();
 
-        setFeaturedBanners({ data, isLoading: false });
+        setFeaturedCategories({ data, isLoading: false });
       } catch (err) {
-        setFeaturedBanners({ data: {}, isLoading: false });
+        setFeaturedCategories({ data: {}, isLoading: false });
         console.error(err);
       }
     }
@@ -44,5 +44,5 @@ export function useFeaturedBanners() {
     };
   }, [apiRef, isApiMetadataLoading]);
 
-  return featuredBanners;
+  return featuredCategories;
 }
